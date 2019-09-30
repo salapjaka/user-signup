@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style>
+            form {
+                background-color: #eee;
+                padding: 20px;
+                margin: 0 auto;
+                width: 540px;
+                font: 16px sans-serif;
+                border-radius: 10px;
+            }
+            .error{
+              color: red;
+            }
+        </style>
+    </head>
+    <body>
+    
+      <form method = 'POST' action="/homepage">
+      <h1>Signup</h1>
+
+      <div>
+        <label>Username
+          <input id = "username" type="text" name = "username" value = "{{username}}"/>
+        </label>
+        <p class = "error">{{username_error}}</p>
+      </div>
+
+      <div>
+        <label>Password
+          <input id = "password" type="password" name = "password" value = "{{password}}"/>
+        </label>
+        <p class = "error">{{password_error}}</p>
+      </div>
+
+      <div>
+        <label>Verify Password
+          <input id = "verify" type="password" name = "verify" value = "{{verify}}"/>
+        </label>
+        <p class = "error">{{verify_error}}</p>
+      </div>
+
+      <div>
+        <label>Email (optional)
+          <input id = "email" type="text" name = "email" value = "{{email}}"/>
+        </label>
+        <p class = "error">{{email_error}}</p>
+      </div>
+      
+      <input type = "submit"/>
+      </form>
+    </body>
+</html>
